@@ -1,11 +1,11 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 
-export default class FirstComponent extends React.Component {
+export default class NavTwo extends React.Component {
   render() {
     return (
         <View style={styles.firstComp}>
-            <Text>This is the first page</Text>
+            <Text>Pressing this button will navigate you to the next page.</Text>
             <Button
                 onPress={() => this.props.navigation.navigate('Two')}
                 title="Next Page"

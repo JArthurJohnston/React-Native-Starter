@@ -3,17 +3,23 @@ import {StyleSheet} from 'react-native';
 import Navigator from './components/Navigator'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from "redux";
+import createSagaMiddleware from 'redux-saga';
+import gitReducer from './reducers/examples/GithubReducer';
+import {githubSagas} from './sagas/examples/GithubSagas';
 
-// const store = createStore(
-//     () => {},
-//     {},
-//     applyMiddleware(() => {})
-// );
+const sagas = createSagaMiddleware(initialstate = {});
+const store = createStore(
+    gitReducer,
+    initialstate,
+    applyMiddleware(sagas)
+);
+
+sagas.run(githubSagas);
 
 export default class App extends React.Component {
   render() {
     return (
-        <Provider>
+        <Provider store={store}>
             <Navigator style={styles.container}/>
         </Provider>
     );

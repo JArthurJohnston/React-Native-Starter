@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View} from 'react-native';
 
 export default class SecondComponent extends React.Component {
   render() {
@@ -7,6 +7,10 @@ export default class SecondComponent extends React.Component {
         <View>
           <Text>This is the second page</Text>
           <Text>Note there is a back button in the header you can use to go back to the home page</Text>
+            <Button
+            onPress={() => this.props.navigation.navigate('GitList')}
+            title="Github List Page"
+            color="#841584"/>
         </View>
     );
   }

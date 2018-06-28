@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {createStackNavigator} from "react-navigation";
-import FirstComponent from './FirstComponent';
-import SecondComponent from './SecondComponent';
-import Login from "./Login";
-
-
+import NavTwo from './examples/NavTwo';
+import SecondComponent from './examples/SecondComponent';
+import NavOne from "./examples/NavOne";
+import GithubRepoList from "./examples/GithubRepoList";
 
 export const RootStack = createStackNavigator(
 	{
-        Login: {screen: Login},
-        Home: {screen: FirstComponent},
-        Two: {screen: SecondComponent}
-    }, {initialRouteName: 'Login'});
+        Proceed: {screen: NavOne},
+        Home: {screen: NavTwo},
+        Two: {screen: SecondComponent},
+        GitList: {screen: GithubRepoList}
+    }, {initialRouteName: 'Proceed'});
 
 class Navigator extends Component {
 	render() {

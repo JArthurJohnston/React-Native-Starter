@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {StackActions, NavigationActions} from "react-navigation";
 
-export default class Login extends React.Component {
+export default class NavOne extends React.Component {
     render() {
         return (
             <View>
@@ -17,7 +17,7 @@ export default class Login extends React.Component {
                         });
                         this.props.navigation.dispatch(action);
                     }}
-                    title="LOGIN"
+                    title="Proceed"
                     color="#00ff99"/>
                 <Text>Pressing this button will navigate you to the next screen without giving you a back button back to this screen</Text>
             </View>
