@@ -7,10 +7,9 @@ import createSagaMiddleware from 'redux-saga';
 import gitReducer from './reducers/examples/GithubReducer';
 import {githubSagas} from './sagas/examples/GithubSagas';
 
-const sagas = createSagaMiddleware(initialstate = {});
+const sagas = createSagaMiddleware();
 const store = createStore(
     gitReducer,
-    initialstate,
     applyMiddleware(sagas)
 );
 

@@ -25,11 +25,12 @@ export class GithubRepoList extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-    return state.repos.map(repo => ({key: repo.id, ...repo}));
+    let mappedRepositories = state.repos.map(repo => ({key: repo.id, ...repo}));
+    return {repos: mappedRepositories};
 };
 
 const mapDispatchToProps = (dispatch, props) => {
-
+    return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(GithubRepoList);

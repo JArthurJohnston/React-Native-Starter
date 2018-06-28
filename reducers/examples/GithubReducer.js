@@ -12,16 +12,13 @@ let defaultState = {
 export default function githubReducer(state = defaultState, action) {
     switch (action.type) {
         case GithubStates.REQUEST_SENT:
-            return { ...state,
-                loading: true };
+            return { ...state };
         case GithubStates.REQUEST_SUCCEEDED:
             return { ...state,
-                loading: false,
-                repos: action.payload.data };
+                repos: action.repos };
         case GithubStates.REQUEST_FAILED:
             return {
                 ...state,
-                loading: false,
                 error: 'Error while fetching repositories'
             };
         default:
