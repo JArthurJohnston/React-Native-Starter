@@ -35,7 +35,6 @@ export class CarList extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-    // alert(JSON.stringify(state));
     return {cars: state.cars};
 };
 

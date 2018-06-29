@@ -15,7 +15,6 @@ export function* sendCarsRequest(action){
 
         yield put({type: CarStates.REQUEST_SUCCEEDED, cars: response.data})
     } catch (error){
-        // console.log(JSON.stringify(error));
         yield put({type: CarStates.REQUEST_FAILED, error: error})
     }
 }
