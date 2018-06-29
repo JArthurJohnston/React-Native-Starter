@@ -3,14 +3,14 @@ import {createStackNavigator} from "react-navigation";
 import NavTwo from './examples/NavTwo';
 import SecondComponent from './examples/SecondComponent';
 import NavOne from "./examples/NavOne";
-import GithubRepoList from "./examples/GithubRepoList";
+import GithubRepoList from "./examples/CarList";
 
 export const RootStack = createStackNavigator(
 	{
         Proceed: {screen: NavOne},
         Home: {screen: NavTwo},
         Two: {screen: SecondComponent},
-        GitList: {screen: GithubRepoList}
+        CarsList: {screen: GithubRepoList}
     }, {initialRouteName: 'Proceed'});
 
 class Navigator extends Component {

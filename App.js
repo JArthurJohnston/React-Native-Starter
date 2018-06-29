@@ -4,8 +4,8 @@ import Navigator from './components/Navigator'
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from "redux";
 import createSagaMiddleware from 'redux-saga';
-import gitReducer from './reducers/examples/GithubReducer';
-import {githubSagas} from './sagas/examples/GithubSagas';
+import gitReducer from './reducers/examples/CarsReducer';
+import {carsSagas} from './sagas/examples/CarsSagas';
 
 const sagas = createSagaMiddleware();
 const store = createStore(
@@ -13,7 +13,7 @@ const store = createStore(
     applyMiddleware(sagas)
 );
 
-sagas.run(githubSagas);
+sagas.run(carsSagas);
 
 export default class App extends React.Component {
   render() {

@@ -18,3 +18,5 @@ yarn-error.log*
 
 # jetbrains
 .idea/
+
+package-lock.json
