@@ -16,21 +16,15 @@ export class CarList extends React.Component {
 
     renderItem = ({ item }) => (
         <View style={styles.item}>
-            <Text>{item.make + " " + item.model}</Text>
+            <Text>{item.year + " " + item.make + " " + item.model}</Text>
         </View>
     );
 
     render() {
-        const cars = this.props.cars;
-        let carList = cars.length == 0 ? <Text></Text> : this.makeCarsList(cars);
-        return (carList);
-    };
-
-    makeCarsList(cars){
-        return <FlatList
+        return (<FlatList
             styles={styles.carsList}
-            data={cars}
-            renderItem={this.renderItem}/>
+            data={this.props.cars}
+            renderItem={this.renderItem}/>);
     };
 }
 
@@ -47,7 +41,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CarList);
-
 
 const styles = StyleSheet.create({
     carsList: {

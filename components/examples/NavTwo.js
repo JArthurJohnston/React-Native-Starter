@@ -7,7 +7,7 @@ export default class NavTwo extends React.Component {
         <View style={styles.firstComp}>
             <Text>Pressing this button will navigate you to the next page.</Text>
             <Button
-                onPress={() => this.props.navigation.navigate('Two')}
+                onPress={() => this.props.navigation.navigate('secondComponent')}
                 title="Next Page"
                 color="#841584"/>
         </View>

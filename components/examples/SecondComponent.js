@@ -8,7 +8,7 @@ export default class SecondComponent extends React.Component {
           <Text>This is the second page</Text>
           <Text>Note there is a back button in the header you can use to go back to the home page</Text>
             <Button
-            onPress={() => this.props.navigation.navigate('CarsList')}
+            onPress={() => this.props.navigation.navigate('carsList')}
             title="Cars List Page"
             color="#841584"/>
         </View>

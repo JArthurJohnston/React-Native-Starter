@@ -12,7 +12,7 @@ export default class NavOne extends React.Component {
                         let action = StackActions.reset({
                             index: 0,
                             actions: [
-                                NavigationActions.navigate({routeName: 'Home'}),
+                                NavigationActions.navigate({routeName: 'navTwo'}),
                             ],
                         });
                         this.props.navigation.dispatch(action);
